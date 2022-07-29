@@ -1,7 +1,8 @@
-import { CurrencyDollar, MapPinLine } from "phosphor-react";
+import { Bank, CreditCard, CurrencyDollar, MapPinLine, Money } from "phosphor-react";
 import { useTheme } from "styled-components";
 import { InputForm } from "../../../../components/InputForm";
 import { TitleType } from "../../../../components/Typography";
+import { PaymentMethodButton } from "../PaymentMethodButton";
 
 import { SectionHeader } from "../SectionHeader";
 import { AddressFormContainer, CompleteOrderContainer, CompleteOrderForm, PaymentContainer } from "./styles";
@@ -20,38 +21,37 @@ export function CompleteOrder(){
           subtitle='Informe o endereço onde deseja receber seu pedido' 
           icon={<MapPinLine size={22} color={colors["yellow-dark"]}/>}
           />
-
-
+          
           <AddressFormContainer>
-            <InputForm
-              placeholder='CEP'
-              type='number'
-              className='cep'
-            />
-             <InputForm
-              placeholder='Rua'
-              className='street'
-            />
-            <InputForm 
-              placeholder='Número'
-              type='number'
-            />
-            <InputForm 
-              placeholder='Complemento'
-              className='complement'
-            />
-            <InputForm 
-              placeholder='Bairro'
-              type='number'
-            />
-            <InputForm 
-              placeholder='Cidade'
-              type='number'
-            />
-            <InputForm 
-              placeholder='UF'
-              type='number'
-            />
+              <InputForm
+                placeholder='CEP'
+                type='number'
+                className='cep'
+              />
+              <InputForm
+                placeholder='Rua'
+                className='street'
+              />
+              <InputForm 
+                placeholder='Número'
+                type='number'
+              />
+              <InputForm 
+                placeholder='Complemento'
+                className='complement'
+              />
+              <InputForm 
+                placeholder='Bairro'
+                type='number'
+              />
+              <InputForm 
+                placeholder='Cidade'
+                type='number'
+              />
+              <InputForm 
+                placeholder='UF'
+                type='number'
+              />
           </AddressFormContainer>
       </CompleteOrderForm>
 
@@ -63,7 +63,18 @@ export function CompleteOrder(){
           />
 
         <PaymentContainer>
-          
+             <PaymentMethodButton 
+              icon={<CreditCard size={16} />} 
+              paymentType="Cartão de Crédito"
+            />
+             <PaymentMethodButton 
+              icon={<Bank size={16} />} 
+              paymentType="Cartão de Débito"
+              />
+             <PaymentMethodButton 
+              icon={<Money size={16} />} 
+              paymentType="Dinheiro"
+              />
         </PaymentContainer>
       </CompleteOrderForm>
     </CompleteOrderContainer>

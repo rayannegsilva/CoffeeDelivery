@@ -9,8 +9,6 @@ interface SectionHeaderProps {
 }
 
 export function SectionHeader({ title, subtitle, icon} : SectionHeaderProps) {
-
-
   return(
     <SectionHeaderContainer>
       {icon}
