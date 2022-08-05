@@ -13,7 +13,7 @@ export const FormContainerBase = styled.div`
   border-radius: 6px;
 `;
 
-export const CompleteOrderForm = styled(FormContainerBase )`
+export const CompleteOrderForm = styled(FormContainerBase)`
   display: flex;
   flex-direction: column;
   gap: 2rem;
