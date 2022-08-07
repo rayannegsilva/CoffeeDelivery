@@ -43,7 +43,7 @@ export function CoffeeCard({ coffee }: CoffeeProps){
         </PriceAmount>
 
         <AddCartWrapper>
-          <QuantityEntry />
+          <QuantityEntry size='medium'/>
           <button>
             <ShoppingCart size={22} weight='fill'/>
           </button>
